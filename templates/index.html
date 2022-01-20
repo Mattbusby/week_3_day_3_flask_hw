@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}} - The worst furniture store online</title>
+</head>
+<body>
+    <h1>Ikant grand sale!</h1>
+    <h2>Look at all the orders below:</h2>
+    {% for order in currentorders %}
+        <div>
+            <p>
+                {{order.date}} {{order.name}} <b>{{order.quantity}} x {{order.item_name}} {{order.type}}</b> {{order.description}}
+                <a href="/orders/{{currentorders.index(order)}}">Show Order</a>
+            </p>
+        </div>
+    {% endfor %}
+</body>
+</html>
